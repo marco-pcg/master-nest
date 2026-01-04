@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../dist/libs/rabbitmq",
-    "rootDir": "src",
-    "composite": true
+    "outDir": "../../dist/apps/api-gateway",
   },
   "include": ["src/**/*"]
 }
