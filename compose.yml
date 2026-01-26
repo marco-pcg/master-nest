@@ -1,0 +1,21 @@
+services:
+    api:
+      build: .
+      container_name: real_estate_api
+      env_file: ".env"
+      ports:
+        - "${PORT}:${PORT}"
+      depends_on:
+        - db
+
+    db:
+      image: postgres:16
+      container_name: real_estate_db
+      env_file: ".env"
+      ports:
+        - "${DB_PORT}:${DB_PORT}"
+      volumes:
+        - pgdata:/var/lib/postgresql/data
+    
+volumes:
+  pgdata: 
